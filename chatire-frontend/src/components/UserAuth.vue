@@ -75,7 +75,6 @@
       signUp() {
         axios.post('http://localhost:8000/auth/users/create/', this.$data)
              .then(function(response) {
-                alert("Your account has been created. You will be signed in.");
                 this.signIn();
              })
              .catch(function(error) {
@@ -98,7 +97,6 @@
                 router.push('/chats');
              })
              .catch(function(error) {
-                console.log(error);
                 alert(error.message);
              })
       }
